@@ -1,0 +1,28 @@
+﻿@model Department
+
+@{
+    ViewData["Title"] = "Create";
+}
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="text-center">Create Department</h1><hr />
+        <form method="post" asp-action="Create">
+            <div class="form-group">
+                <label asp-for="Name">Name</label>
+                <input type="text" class="form-control col-md-5" asp-for="Name" required="required" placeholder="Enter Name"><br>
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Detail">Detail</label>
+                <textarea class="form-control col-md-5" asp-for="Detail" required="required" placeholder="Details"></textarea>
+                <span asp-validation-for="Detail" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+            <a class="btn btn-info" asp-action="index">Back to Department list</a>
+        </form>
+    </div>
+</div>
+
+<script src="~/js/site.js"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>

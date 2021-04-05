@@ -1,0 +1,32 @@
+﻿@model List<Student>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="text-center">Student Details</h1>
+        <hr />
+        <table id="example" class="table table-bordered table-dark">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Department Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Student item in Model)
+                {
+                    <tr>
+                        <td>@item.Name</td>  
+                        <td>@item.Email</td>
+                        <td>@item.Department.Name</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
